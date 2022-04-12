@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <title>风铃</title>
     <style>
-        *{margin: 0;padding: 0;box-sizing: border-box;}
-        :root{
-            --font-size:14px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --font-size: 14px;
             --button-height: 32px;
             --button-bg: white;
             --button-active-bg: #eee;
@@ -17,9 +23,11 @@
             --border-color: #999;
             --border-color-hover: #666;
         }
+
         #app {
             margin: 20px;
         }
+
         body {
             font-size: var(--font-size);
         }
@@ -27,9 +35,15 @@
     </style>
 </head>
 <body>
-    <div id="app">
-        <wb-button></wb-button>
-    </div>
-    <script src="./src/app.js"></script>
+<div id="app">
+    <wb-button icon="settings">
+        按钮
+    </wb-button>
+    <wb-button icon="settings" icon-position="right">
+        按钮
+    </wb-button>
+</div>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_718972_lyygpj1bd1r.js"></script>
 </body>
 </html>
