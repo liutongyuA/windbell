@@ -1,5 +1,6 @@
 <template>
   <button class='wb-button' :class=`icon-${iconPosition}`>
+    <wb-icon icon="loading" class="loading"></wb-icon>
     <wb-icon :icon="icon" v-if="icon" class="svg"></wb-icon>
     <div class="content">
       <slot></slot>
@@ -24,6 +25,10 @@ export default {
 </script>
 
 <style  lang="scss">
+@keyframes spin {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
+}
 .wb-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -44,7 +49,9 @@ export default {
   &:focus {
   outline: none;
 }
-
+  .loading{
+    animation: spin 2s linear infinite;
+  }
   > .svg{order:1; margin-right: .1em; }
   > .content{order: 2 }
   &.icon-right{
