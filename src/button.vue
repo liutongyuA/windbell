@@ -1,8 +1,6 @@
 <template>
   <button class='wb-button' :class=`icon-${iconPosition}`>
-    <svg class="svg" v-if="icon">
-      <use :xlink:href=`#i-${icon}`></use>
-    </svg>
+    <wb-icon :icon="icon" v-if="icon" class="svg"></wb-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -12,14 +10,12 @@
 <script>
 export default {
   name: "Button",
-  // props:['icon','iconPosition']
   props:{
     icon:{},
     iconPosition:{
       type:String,
       default:'left',
       validator(value) {
-        console.log(value);
         return value !== 'left' && value !=='right' ? false :true
       }
     }
@@ -48,9 +44,7 @@ export default {
   &:focus {
   outline: none;
 }
-  .svg{
-    width: 1em;height: 1em;
-  }
+
   > .svg{order:1; margin-right: .1em; }
   > .content{order: 2 }
   &.icon-right{
