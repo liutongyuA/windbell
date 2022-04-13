@@ -36,13 +36,13 @@
 </head>
 <body>
 <div id="app">
-    <wb-button :loading="loading1" @click.native="loading1=!loading1">
+    <wb-button :loading="loading1" @click="loading1=!loading1">
         按钮
     </wb-button>
-    <wb-button icon="settings" :loading="loading2" @click.native="loading2=!loading2">
+    <wb-button icon="settings" :loading="loading2" @click="loading2=!loading2">
         按钮
     </wb-button>
-    <wb-button icon="settings" icon-position="right" :loading="loading3" @click.native="loading3=!loading3">
+    <wb-button icon="settings" icon-position="right" :loading="loading3" @click="loading3=!loading3">
         按钮
     </wb-button>
     <wb-button-group>
