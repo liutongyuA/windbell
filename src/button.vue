@@ -1,7 +1,7 @@
 <template>
   <button class='wb-button' :class=`icon-${iconPosition}`>
-    <wb-icon icon="loading" class="loading"></wb-icon>
-    <wb-icon :icon="icon" v-if="icon" class="svg"></wb-icon>
+    <wb-icon icon="loading" class="loading svg" v-if="loading"></wb-icon>
+    <wb-icon :icon="icon" v-if="icon&&!loading" class="svg"></wb-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -19,6 +19,10 @@ export default {
       validator(value) {
         return value !== 'left' && value !=='right' ? false :true
       }
+    },
+    loading:{
+      default: false,
+      type:Boolean
     }
   }
 }
