@@ -39,6 +39,9 @@
     <wb-button :loading="loading1" @click="loading1=!loading1">
         按钮
     </wb-button>
+    <wb-button  icon="download">
+        下载
+    </wb-button>
     <wb-button icon="settings" :loading="loading2" @click="loading2=!loading2">
         按钮
     </wb-button>
@@ -49,8 +52,14 @@
         <wb-button icon="left">上一页</wb-button>
         <wb-button icon="right" icon-position="right">下一页</wb-button>
     </wb-button-group>
+    <br>
+    <div>下面开始写的是input轮子</div>
+    <br>
+    <wb-input value="正常输入"></wb-input>
+    <wb-input value="禁止输入" disabled></wb-input>
+    <wb-input value="只读" readonly></wb-input>
+    <wb-input value="输入错误" error="信息输入错误，请检查"></wb-input>
 </div>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_718972_1hhoomwpb69.js"></script>
 </body>
 </html>
