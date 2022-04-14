@@ -12,7 +12,13 @@ new Vue({
     data:{
         loading1:false,
         loading2:false,
-        loading3:false
+        loading3:false,
+        message:"你的名字"
+    },
+    methods:{
+        back(e){
+            console.log(e.target.value);
+        }
     }
 })
 /*单元测试*/
