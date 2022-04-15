@@ -1,16 +1,20 @@
 <template>
-  <button class='wb-button' :class=`icon-${iconPosition}`  @click="$emit('click')">
-    <wb-icon icon="loading" class="loading svg" v-if="loading"></wb-icon>
-    <wb-icon :icon="icon" v-if="icon&&!loading" class="svg"></wb-icon>
-    <div class="content">
-      <slot></slot>
-    </div>
-  </button>
+    <button class='wb-button' :class="{[`icon-${iconPosition}`]: true}"  @click="$emit('click')">
+      <wb-icon icon="loading" class="loading svg" v-if="loading"></wb-icon>
+      <wb-icon :icon="icon" v-if="icon&&!loading" class="svg"></wb-icon>
+      <div class="content">
+        <slot></slot>
+      </div>
+    </button>
 </template>
 
 <script>
+import Icon from './wb-icon'
 export default {
-  name: "Button",
+  name: "wb-button",
+  components:{
+    'wb-icon':Icon
+  },
   props:{
     icon:{},
     iconPosition:{

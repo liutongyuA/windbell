@@ -18,8 +18,10 @@
 </template>
 
 <script>
+import wbIcon from './wb-icon'
 export default {
-  name: "input",
+  name: "wb-input",
+  components: {'wb-icon':wbIcon},
   props:{
     value:{
       type:String

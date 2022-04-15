@@ -1,13 +1,13 @@
 <template>
   <svg class="svg">
-    <use :xlink:href=`#i-${icon}`></use>
+    <use :xlink:href="`#i-${icon}`"></use>
   </svg>
 </template>
 
 <script>
 import './svg'
 export default {
-  name: "icon",
+  name: "wb-icon",
   props:['icon']
 }
 </script>
