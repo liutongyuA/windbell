@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/windbell/',
     title: '风铃UI',
     description: '基于Vue的UI框架',
     themeConfig: {
