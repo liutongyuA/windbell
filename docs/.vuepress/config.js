@@ -2,7 +2,12 @@ module.exports = {
     base:'/windbell/',
     title: '风铃UI',
     description: '基于Vue的UI框架',
-    themeConfig: {
+    head: [
+        [
+            'link', { rel: 'icon', href: '/img/logo.png' }
+        ]],
+        themeConfig: {
+        logo:'/img/logo.png',
         nav: [
             {text: '主页', link: '/'},
             {text: '文档', link: '/guide/'},
