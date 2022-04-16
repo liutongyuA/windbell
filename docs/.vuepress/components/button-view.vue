@@ -1,12 +1,10 @@
 <template>
   <div>
-    <wb-button :loading="false" @click="loading=!loading">默认按钮</wb-button>
-    <wb-button icon="settings" icon-position="right">默认按钮</wb-button>
+    <wb-button :loading="false">默认按钮</wb-button>
+    <wb-button  icon-position="right" :loading="true">默认按钮</wb-button>
     <wb-button icon="download">默认按钮</wb-button>
     <wb-button disabled>默认按钮</wb-button>
-    <pre>
-      <code>{{conent}}</code>
-    </pre>
+    <pre><code>{{conent}}</code></pre>
   </div>
 </template>
 
@@ -21,7 +19,10 @@ export default {
   data(){
     return{
       conent:`
-      <wb-button disabled>默认按钮</wb-button>`
+    <wb-button :loading="false">默认按钮</wb-button>
+    <wb-button  icon-position="right" :loading="true">默认按钮</wb-button>
+    <wb-button icon="download">默认按钮</wb-button>
+    <wb-button disabled>默认按钮</wb-button>`.replace(/\t+| +/g,'').trim()
     }
   }
 }
