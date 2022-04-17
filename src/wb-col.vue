@@ -1,11 +1,6 @@
 <template>
-<div class="col" :class="[span && `col-${span}`,offset && `offset-${offset}`]"
-:style="{paddingRight: gutter/2 +'px', paddingLeft:gutter/2 +'px'}"
->
-<!--  为了能看清padding加的div-->
-  <div style="border: 1px solid green;" >
+<div class="col" :class="colClass" :style="colStyle">
   <slot></slot>
-  </div>
 </div>
 </template>
 
@@ -18,7 +13,18 @@ export default {
   },
   data(){
     return {
-      gutter:0 //父组件mounted时传过来
+      gutter:0 ,//父组件mounted时传过来,
+      colClass:[this.span && `col-${this.span}`,this.offset && `offset-${this.offset}`]
+    }
+  },
+  computed:{
+    colClass(){
+      const {span,offset} = this
+      return [span && `col-${span}`,offset && `offset-${offset}`]
+    },
+    colStyle(){
+      const {gutter} =this
+      return {paddingRight: gutter/2 +'px', paddingLeft:gutter/2 +'px'}
     }
   }
 }
@@ -26,10 +32,7 @@ export default {
 
 <style scoped lang="scss">
 .col{
-  height: 100px;
   width: 50%;
-  //background-color: #ddd;
-  //border: 1px solid red;
   @for $n from 1 through 24 {
     &.col-#{$n} {
       width: ($n / 24) * 100%;

@@ -24,11 +24,23 @@
         body {
             font-size: var(--font-size);
         }
-
+        .demo{
+            margin-bottom: 10px;
+            border: 1px solid red;
+        }
+        /*测试栅格*/
+        .grid-content {
+            border-radius: 4px;
+            min-height: 36px;
+        }
+        .bg-purple {
+            background: #d3dce6;
+        }
     </style>
 </head>
 <body>
 <div id="app">
+    <div class="demo">
     <wb-button :loading="loading1" @click="loading1=!loading1">
         按钮
     </wb-button>
@@ -45,43 +57,50 @@
         <wb-button icon="left">上一页</wb-button>
         <wb-button icon="right" icon-position="right">下一页</wb-button>
     </wb-button-group>
-    <div>下面开始写的是input轮子</div>
-    <br/>
+    </div>
+    <div class="demo">
     <wb-input value="正常输入"></wb-input>
     <wb-input value="禁止输入" disabled></wb-input>
     <wb-input value="只读" readonly></wb-input>
     <wb-input value="输入错误" error="信息输入错误，请检查"></wb-input>
     <wb-input value="绑定事件" @change="back"></wb-input>
     <wb-input v-model="message">双向绑定</wb-input>
-    <hr>
-<div>基础布局</div>
+    </div>
+<div class="demo">基础布局
     <wb-row>
-        <wb-col span="2">1</wb-col>
-        <wb-col span="5">2</wb-col>
-        <wb-col span="17">3</wb-col>
+        <wb-col span="2"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col span="5"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col span="17"><div class="grid-content bg-purple"></div></wb-col>
     </wb-row>
     <wb-row>
-        <wb-col>1</wb-col>
-        <wb-col>2</wb-col>
-        <wb-col>3</wb-col>
+        <wb-col><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col><div class="grid-content bg-purple"></div></wb-col>
     </wb-row>
 <div>分栏偏移</div>
     <wb-row>
-        <wb-col span="6">1</wb-col>
-        <wb-col span="6" offset="6">2</wb-col>
+        <wb-col span="6"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col span="6" offset="6"><div class="grid-content bg-purple"></div></wb-col>
     </wb-row>
     <wb-row>
-        <wb-col span="12" offset="6">1</wb-col>
+        <wb-col span="12" offset="6"><div class="grid-content bg-purple"></div></wb-col>
     </wb-row>
     <div>混合布局</div>
     <wb-row gutter="20">
-        <wb-col span="6">1</wb-col>
-        <wb-col span="6">2</wb-col>
+        <wb-col span="6"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col span="6"><div class="grid-content bg-purple"></div></wb-col>
     </wb-row>
     <wb-row gutter="20">
-        <wb-col span="6">1</wb-col>
-        <wb-col span="6" offset="6">2</wb-col>
+        <wb-col span="6"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col span="6" offset="6"><div class="grid-content bg-purple"></div></wb-col>
     </wb-row>
+    <wb-row :gutter="20">
+        <wb-col :span="8"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col :span="8"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col :span="4"><div class="grid-content bg-purple"></div></wb-col>
+        <wb-col :span="4"><div class="grid-content bg-purple"></div></wb-col>
+    </wb-row>
+</div>
 </div>
 <script src="app.js"></script>
 </body>
