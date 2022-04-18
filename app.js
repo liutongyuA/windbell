@@ -9,6 +9,8 @@ import wbContent from './src/wb-content'
 import wbHeader from './src/wb-header'
 import wbFooter from './src/wb-footer'
 import wbAside from './src/wb-aside'
+import plugin from "./src/plugin";
+Vue.use(plugin)
 Vue.component('wb-button',wbButton)
 Vue.component('wb-button-group',ButtonGroup)
 Vue.component('wb-input',wbInput)
@@ -30,6 +32,9 @@ new Vue({
     methods:{
         back(value){
             console.log(value);
+        },
+        show(){
+            this.$message('这是一条消息！！！')
         }
     }
 })

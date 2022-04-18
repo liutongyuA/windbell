@@ -7,56 +7,56 @@
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
     <title>风铃</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /** {*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*    box-sizing: border-box;*/
+        /*}*/
 
-        :root {
-            --font-size: 14px;
-        }
+        /*:root {*/
+        /*    --font-size: 14px;*/
+        /*}*/
 
-        #app {
-            margin: 20px;
-        }
+        /*#app {*/
+        /*    margin: 20px;*/
+        /*}*/
 
-        body {
-            font-size: var(--font-size);
-        }
-        .demo{
-            margin-bottom: 10px;
-            border: 1px solid red;
-        }
+        /*body {*/
+        /*    font-size: var(--font-size);*/
+        /*}*/
+        /*.demo{*/
+        /*    margin-bottom: 10px;*/
+        /*    border: 1px solid red;*/
+        /*}*/
         /*测试栅格*/
-        .grid-content {
-            border-radius: 4px;
-            min-height: 36px;
-        }
-        .bg-purple {
-            background: #d3dce6;
-        }
+        /*.grid-content {*/
+        /*    border-radius: 4px;*/
+        /*    min-height: 36px;*/
+        /*}*/
+        /*.bg-purple {*/
+        /*    background: #d3dce6;*/
+        /*}*/
     /*    测试layout*/
-        .header, .footer {
-            background-color: #B3C0D1;
-            color: #333;
-            text-align: center;
-            line-height: 60px;
-        }
+    /*    .header, .footer {*/
+    /*        background-color: #B3C0D1;*/
+    /*        color: #333;*/
+    /*        text-align: center;*/
+    /*        line-height: 60px;*/
+    /*    }*/
 
-        .aside {
-            background-color: #D3DCE6;
-            color: #333;
-            text-align: center;
-            line-height: 200px;
-        }
+    /*    .aside {*/
+    /*        background-color: #D3DCE6;*/
+    /*        color: #333;*/
+    /*        text-align: center;*/
+    /*        line-height: 200px;*/
+    /*    }*/
 
-        .content {
-            background-color: #E9EEF3;
-            color: #333;
-            text-align: center;
-            line-height: 160px;
-        }
+    /*    .content {*/
+    /*        background-color: #E9EEF3;*/
+    /*        color: #333;*/
+    /*        text-align: center;*/
+    /*        line-height: 160px;*/
+    /*    }*/
     </style>
 </head>
 <body>
@@ -146,14 +146,17 @@
 <!--            <wb-footer class="test"></wb-footer>-->
 <!--        </wb-layout>-->
 <!--        左 上中下-->
-        <wb-layout>
-            <wb-aside >左侧边栏</wb-aside>
-            <wb-layout>
-                <wb-header >头部</wb-header>
-                <wb-content >右内容区</wb-content>
-                <wb-footer >尾部</wb-footer>
-            </wb-layout>
-        </wb-layout>
+<!--        <wb-layout>-->
+<!--            <wb-aside >左侧边栏</wb-aside>-->
+<!--            <wb-layout>-->
+<!--                <wb-header >头部</wb-header>-->
+<!--                <wb-content >右内容区</wb-content>-->
+<!--                <wb-footer >尾部</wb-footer>-->
+<!--            </wb-layout>-->
+<!--        </wb-layout>-->
+    </div>
+    <div>
+            <wb-button @click="show">点我</wb-button>
     </div>
 </div>
 <script src="app.js"></script>
