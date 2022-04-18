@@ -36,11 +36,32 @@
         .bg-purple {
             background: #d3dce6;
         }
+    /*    测试layout*/
+        .header, .footer {
+            background-color: #B3C0D1;
+            color: #333;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .aside {
+            background-color: #D3DCE6;
+            color: #333;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .content {
+            background-color: #E9EEF3;
+            color: #333;
+            text-align: center;
+            line-height: 160px;
+        }
     </style>
 </head>
 <body>
 <div id="app">
-    <div class="demo">
+<!--    <div class="demo">
     <wb-button :loading="loading1" @click="loading1=!loading1">
         按钮
     </wb-button>
@@ -107,7 +128,33 @@
         <wb-col span="4" :sm="{span:'6',offset:'2'}" :md="{span:'8',offset:'2'}" :lg="{span:'9',offset:'2'}" :xl="{span:'11',offset:'2'}"><div class="grid-content bg-purple"></div></wb-col>
         <wb-col span="8" :sm="{span:'6',offset:'2'}" :md="{span:'4',offset:'2'}" :lg="{span:'3',offset:'2'}" :xl="{span:'1',offset:'2'}"><div class="grid-content bg-purple"></div></wb-col>
     </wb-row>
-</div>
+</div>-->
+    <div>
+<!--        上中下-->
+<!--        <wb-layout style="height: 100vh; border: 1px solid #eee">-->
+<!--            <wb-header class="test"></wb-header>-->
+<!--            <wb-content class="test">内容区</wb-content>-->
+<!--            <wb-footer class="test"></wb-footer>-->
+<!--        </wb-layout>-->
+<!--        上 左右 下-->
+<!--        <wb-layout style="height: 100vh; border: 1px solid #eee">-->
+<!--            <wb-header class="test"></wb-header>-->
+<!--            <wb-layout>-->
+<!--                <wb-aside class="test">左侧边栏</wb-aside>-->
+<!--                <wb-content class="test">右内容区</wb-content>-->
+<!--            </wb-layout>-->
+<!--            <wb-footer class="test"></wb-footer>-->
+<!--        </wb-layout>-->
+<!--        左 上中下-->
+        <wb-layout>
+            <wb-aside >左侧边栏</wb-aside>
+            <wb-layout>
+                <wb-header >头部</wb-header>
+                <wb-content >右内容区</wb-content>
+                <wb-footer >尾部</wb-footer>
+            </wb-layout>
+        </wb-layout>
+    </div>
 </div>
 <script src="app.js"></script>
 </body>
