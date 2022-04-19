@@ -1,5 +1,5 @@
 <template>
-  <div class="message" ref="message">
+  <div class="message" ref="message" :class="`pos-${position}`">
     <slot v-if="!enableHtml"></slot>
     <div v-else v-html="$slots.default[0]"></div>
     <template v-if="showClose">
@@ -31,6 +31,14 @@ export default {
     enableHtml:{
       type:Boolean,
       default:false
+    },
+    //展示位置
+    position:{
+      type:String,
+      default:'top',
+      validator(value){
+          return ['top','middle','bottom'].indexOf(value) >=0
+      }
     }
   },
   methods:{
@@ -57,6 +65,11 @@ export default {
       })
     }
   },
+  // computed:{
+  //   a(){
+  //     return
+  //   }
+  // },
   mounted() {
     this.autoClose()
     this.updateStyle()
@@ -72,7 +85,7 @@ export default {
   color: white;
   position: fixed;
   left: 50%;
-  top: 0;
+
   transform: translateX(-50%);
   line-height: 1.8;
   display: flex;
@@ -86,6 +99,16 @@ export default {
   .close{
     padding-left: 16px;
     flex-shrink: 0;
+  }
+  &.pos-top{
+    top: 0;
+  }
+  &.pos-middle{
+    top: 50%;
+    transform:translateX(-50%) translateY(-50%);
+  }
+  &.pos-bottom{
+    bottom: 0;
   }
 }
 </style>
