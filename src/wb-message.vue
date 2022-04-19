@@ -1,6 +1,7 @@
 <template>
   <div class="message" ref="message">
-    <slot></slot>
+    <slot v-if="!enableHtml"></slot>
+    <div v-else v-html="$slots.default[0]"></div>
     <template v-if="showClose">
       <div class="line" ref="line"></div>
       <div class="close" @click="clickClose">关闭</div>
@@ -25,7 +26,12 @@ export default {
     //关闭回调函数
     onclose:{
       type:Function
-     }
+     },
+    //使用html文字
+    enableHtml:{
+      type:Boolean,
+      default:false
+    }
   },
   methods:{
     close(){
@@ -75,7 +81,7 @@ export default {
   padding:0 16px;
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.50);
   .line{
-    border-right: 2px solid #666;
+    border-left: 1px solid #666;
   }
   .close{
     padding-left: 16px;

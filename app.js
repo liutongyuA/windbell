@@ -34,8 +34,8 @@ new Vue({
             console.log(value);
         },
         show(){
-            this.$message('这是一条消息！！！',
-                {duration:0,showClose:true,onclose:function(){alert('回调函数想干嘛')}})
+            this.$message('<strong>这是 <i>HTML</i> 片段</strong>',
+                {duration:0,showClose:true,enableHtml:false,onclose:function(){alert('回调函数想干嘛')}})
         }
     }
 })
