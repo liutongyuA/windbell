@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: "wb-tabs-content"
+  name: "wb-tabs-content",
+  inject:['eventBus'],
+  created() {
+  }
 }
 </script>
 

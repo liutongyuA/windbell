@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import Vue from 'vue'
 export default {
   name: "wb-tabs",
   props:{
@@ -22,8 +23,11 @@ export default {
   },
   data(){
     return {
-
+      eventBus:new Vue()
     }
+  },
+  provide(){
+    return {eventBus:this.eventBus}
   },
 created() {
     //这个组件必须要触发这个事件，用于修改selected

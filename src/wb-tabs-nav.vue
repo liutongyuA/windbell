@@ -7,7 +7,10 @@
 
 <script>
 export default {
-  name: "wb-tabs-nav"
+  name: "wb-tabs-nav",
+  inject:['eventBus'],
+  created() {
+  }
 }
 </script>
 

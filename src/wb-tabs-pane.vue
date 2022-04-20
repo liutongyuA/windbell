@@ -6,7 +6,13 @@
 
 <script>
 export default {
-  name: "wb-tabs-pane"
+  name: "wb-tabs-pane",
+  inject:['eventBus'],
+  created() {
+    this.eventBus.$on('update:selected',(name)=>{
+      console.log(name);
+    })
+  }
 }
 </script>
 
