@@ -73,6 +73,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@keyframes fade-down {
+  from{top:-200px}
+  to{top: 0}
+}
+@keyframes fade {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+@keyframes fade-up {
+  from{bottom:-200px}
+  to{bottom: 0}
+}
+$duration:0.3s;
 .message{
   font-size: 14px;
   min-height: 40px;
@@ -80,7 +93,6 @@ export default {
   color: white;
   position: fixed;
   left: 50%;
-
   transform: translateX(-50%);
   line-height: 1.8;
   display: flex;
@@ -97,13 +109,16 @@ export default {
   }
   &.pos-top{
     top: 0;
+    animation: fade-down $duration;
   }
   &.pos-middle{
     top: 50%;
     transform:translateX(-50%) translateY(-50%);
+    animation: fade $duration;
   }
   &.pos-bottom{
     bottom: 0;
+    animation: fade-up $duration;
   }
 }
 </style>

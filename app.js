@@ -35,7 +35,7 @@ new Vue({
         },
         show(){
             this.$message('<strong>这是 <i>HTML</i> 片段</strong>',
-                {duration:0,showClose:true,enableHtml:false,position:'top',onclose:function(){alert('回调函数想干嘛')}})
+                {duration:0,showClose:true,enableHtml:false,position:'bottom',onclose:function(){alert('回调函数想干嘛')}})
         }
     }
 })
