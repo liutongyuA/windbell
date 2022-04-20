@@ -1,0 +1,37 @@
+<template>
+<div class="tabs">
+  <slot></slot>
+</div>
+</template>
+
+<script>
+export default {
+  name: "wb-tabs",
+  props:{
+    selected:{
+      type:String,
+      require:true
+    },
+    direction:{
+      type:String,
+      default:'horizontal',
+      validator(value){
+        return ['horizontal','vertical'].indexOf(value)>=0
+      }
+    }
+  },
+  data(){
+    return {
+
+    }
+  },
+created() {
+    //这个组件必须要触发这个事件，用于修改selected
+    // this.$emit('update:selected','')
+}
+}
+</script>
+
+<style scoped>
+
+</style>

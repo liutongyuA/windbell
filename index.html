@@ -155,8 +155,28 @@
 <!--            </wb-layout>-->
 <!--        </wb-layout>-->
     </div>
+<!--    <div>-->
+<!--    message 组件-->
+<!--            <wb-button @click="show">点我</wb-button>-->
+<!--    </div>-->
+<!--  tabs组件  -->
     <div>
-            <wb-button @click="show">点我</wb-button>
+        <wb-tabs :selected.sync="selectedTab">
+            <wb-tabs-nav>
+                <template slot="actions"><button>设置</button></template>
+                <wb-tabs-item name="user" disabled>用户管理</wb-tabs-item>
+                <wb-tabs-item name="config">
+                    <wb-icon icon="settings"></wb-icon>
+                    配置管理
+                </wb-tabs-item>
+                <wb-tabs-item name="role">角色管理</wb-tabs-item>
+            </wb-tabs-nav>
+            <wb-tabs-content>
+                <wb-tabs-pane name="user">用户管理</wb-tabs-pane>
+                <wb-tabs-pane name="config">配置管理</wb-tabs-pane>
+                <wb-tabs-pane name="role">角色管理</wb-tabs-pane>
+            </wb-tabs-content>
+        </wb-tabs>
     </div>
 </div>
 <script src="app.js"></script>
