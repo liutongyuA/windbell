@@ -65,11 +65,6 @@ export default {
       })
     }
   },
-  // computed:{
-  //   a(){
-  //     return
-  //   }
-  // },
   mounted() {
     this.autoClose()
     this.updateStyle()
