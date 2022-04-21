@@ -164,12 +164,12 @@
         <wb-tabs :selected.sync="selectedTab">
             <wb-tabs-nav>
                 <template slot="actions"><button>设置</button></template>
-                <wb-tabs-item name="user" disabled>用户管理</wb-tabs-item>
+                <wb-tabs-item name="user">用户管理</wb-tabs-item>
                 <wb-tabs-item name="config">
                     <wb-icon icon="settings"></wb-icon>
                     配置管理
                 </wb-tabs-item>
-                <wb-tabs-item name="role">角色管理</wb-tabs-item>
+                <wb-tabs-item name="role" disabled>角色管理</wb-tabs-item>
             </wb-tabs-nav>
             <wb-tabs-content>
                 <wb-tabs-pane name="user">用户管理相关内容</wb-tabs-pane>

@@ -30,12 +30,16 @@ export default {
   },
   methods:{
     changeSelected(){
+      if(this.disabled) return
       this.eventBus.$emit('update:selected',this.name,this.$el.getBoundingClientRect())
     }
   },
   computed:{
     classes(){
-      return {active : this.active}
+      return {
+        active : this.active,
+        disabled :this.disabled
+      }
     }
   }
 }
@@ -54,6 +58,10 @@ export default {
     .svg{
       fill: #51A7FF;
     }
+  }
+  &.disabled{
+    color: #929190 ;
+    cursor:not-allowed;
   }
 
 }

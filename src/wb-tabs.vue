@@ -13,13 +13,13 @@ export default {
       type:String,
       require:true
     },
-    direction:{
-      type:String,
-      default:'horizontal',
-      validator(value){
-        return ['horizontal','vertical'].indexOf(value)>=0
-      }
-    }
+    // direction:{
+    //   type:String,
+    //   default:'horizontal',
+    //   validator(value){
+    //     return ['horizontal','vertical'].indexOf(value)>=0
+    //   }
+    // }
   },
   data(){
     return {
