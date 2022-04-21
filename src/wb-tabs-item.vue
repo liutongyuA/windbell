@@ -30,7 +30,7 @@ export default {
   },
   methods:{
     changeSelected(){
-      this.eventBus.$emit('update:selected',this.name)
+      this.eventBus.$emit('update:selected',this.name,this.$el.getBoundingClientRect())
     }
   },
   computed:{
@@ -43,11 +43,19 @@ export default {
 
 <style scoped lang="scss">
 .tabs-item{
+  height: 100%;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
   padding: 0 1em;
+  cursor: pointer;
   &.active {
-    background: red;
+    color: #51A7FF;
+    .svg{
+      fill: #51A7FF;
+    }
   }
+
 }
 
 </style>

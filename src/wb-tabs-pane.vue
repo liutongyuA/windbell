@@ -28,5 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.tabs-pane{
+  padding: 1em;
+}
 </style>

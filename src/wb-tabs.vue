@@ -31,7 +31,16 @@ export default {
   },
 mounted() {
   //这个组件必须要触发这个事件，用于修改selected
-    this.eventBus.$emit('update:selected',this.selected)
+  //   this.eventBus.$emit('update:selected',this.selected)
+  this.$children.forEach((vm)=>{
+    if(vm.$options.name === 'wb-tabs-nav'){
+      vm.$children.forEach((childVm)=>{
+        if (childVm.$options.name === 'wb-tabs-item'&& childVm.name === this.selected){
+          this.eventBus.$emit('update:selected', this.selected, childVm.$el.getBoundingClientRect())
+        }
+      })
+    }
+  })
 }
 }
 </script>
