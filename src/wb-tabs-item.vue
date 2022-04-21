@@ -1,5 +1,5 @@
 <template>
-<div class="tabs-item" @click="xxx">
+<div class="tabs-item" @click="changeSelected" :class="classes">
   <slot></slot>
 </div>
 </template>
@@ -7,6 +7,11 @@
 <script>
 export default {
   name: "wb-tabs-item",
+  data(){
+    return{
+        active:false
+    }
+  },
   props:{
     disabled:{
       type:Boolean,
@@ -20,17 +25,29 @@ export default {
   inject:['eventBus'],
   created() {
     this.eventBus.$on('update:selected',(name)=>{
-      console.log(name);
+      this.active = this.name === name
     })
   },
   methods:{
-    xxx(){
+    changeSelected(){
       this.eventBus.$emit('update:selected',this.name)
+    }
+  },
+  computed:{
+    classes(){
+      return {active : this.active}
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.tabs-item{
+  flex-shrink: 0;
+  padding: 0 1em;
+  &.active {
+    background: red;
+  }
+}
 
 </style>

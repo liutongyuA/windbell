@@ -1,5 +1,5 @@
 <template>
-<div class="tabs-pane">
+<div class="tabs-pane" v-if="active">
   <slot></slot>
 </div>
 </template>
@@ -8,14 +8,25 @@
 export default {
   name: "wb-tabs-pane",
   inject:['eventBus'],
+  data(){
+    return{
+      active:false
+    }
+  },
+  props:{
+    name:{
+      type:Number|String,
+      required:true
+    }
+  },
   created() {
     this.eventBus.$on('update:selected',(name)=>{
-      console.log(name);
+      this.active = this.name === name
     })
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

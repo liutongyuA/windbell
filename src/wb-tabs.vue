@@ -29,9 +29,9 @@ export default {
   provide(){
     return {eventBus:this.eventBus}
   },
-created() {
-    //这个组件必须要触发这个事件，用于修改selected
-    // this.$emit('update:selected','')
+mounted() {
+  //这个组件必须要触发这个事件，用于修改selected
+    this.eventBus.$emit('update:selected',this.selected)
 }
 }
 </script>
