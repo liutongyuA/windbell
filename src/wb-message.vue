@@ -106,6 +106,7 @@ $duration:0.3s;
   .close{
     padding-left: 16px;
     flex-shrink: 0;
+    cursor: pointer;
   }
   &.pos-top{
     top: 0;
