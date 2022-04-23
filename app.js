@@ -17,6 +17,7 @@ import wbTabsNav from './src/wb-tabs-nav'
 import wbTabsItem from './src/wb-tabs-item'
 import wbTabsContent from './src/wb-tabs-content'
 import wbTabsPane from './src/wb-tabs-pane'
+import wbPopover from './src/wb-popover'
 Vue.component('wb-icon',wbIcon)
 Vue.component('wb-button',wbButton)
 Vue.component('wb-button-group',ButtonGroup)
@@ -33,6 +34,7 @@ Vue.component('wb-tabs-nav',wbTabsNav)
 Vue.component('wb-tabs-item',wbTabsItem)
 Vue.component('wb-tabs-content',wbTabsContent)
 Vue.component('wb-tabs-pane',wbTabsPane)
+Vue.component('wb-popover',wbPopover)
 new Vue({
     el:'#app',
     data:{
