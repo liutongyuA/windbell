@@ -18,6 +18,8 @@ import wbTabsItem from './src/wb-tabs-item'
 import wbTabsContent from './src/wb-tabs-content'
 import wbTabsPane from './src/wb-tabs-pane'
 import wbPopover from './src/wb-popover'
+import wbCollapse from './src/wb-collapse'
+import wbCollapseItem from './src/wb-collapse-item'
 Vue.component('wb-icon',wbIcon)
 Vue.component('wb-button',wbButton)
 Vue.component('wb-button-group',ButtonGroup)
@@ -35,6 +37,8 @@ Vue.component('wb-tabs-item',wbTabsItem)
 Vue.component('wb-tabs-content',wbTabsContent)
 Vue.component('wb-tabs-pane',wbTabsPane)
 Vue.component('wb-popover',wbPopover)
+Vue.component('wb-collapse',wbCollapse)
+Vue.component('wb-collapse-item',wbCollapseItem)
 new Vue({
     el:'#app',
     data:{
