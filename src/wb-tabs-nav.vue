@@ -17,22 +17,23 @@ export default {
       this.active = this.name === name
       this.$refs.line.style.width= item.width+'px'
       this.$refs.line.style.left = item.left +'px'
+      this.$refs.line.style.top = item.top+item.height +'px'
     })
   },
 }
 </script>
 
 <style scoped lang="scss">
+
 .tabs-nav{
   height: 40px;
   display: flex;
   justify-content: flex-start;
   border-bottom: 1px solid #E4E7ED;
-  position: relative;
+  //position: relative;
   >.line{
     position: absolute;
     border-bottom: 1px solid #51A7FF;
-    bottom: -1px;
     transition: all 350ms;
   }
   >.actions-wrapper{
