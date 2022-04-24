@@ -20,6 +20,7 @@ import wbTabsPane from './src/wb-tabs-pane'
 import wbPopover from './src/wb-popover'
 import wbCollapse from './src/wb-collapse'
 import wbCollapseItem from './src/wb-collapse-item'
+import wbCascader from './src/wb-cascader'
 Vue.component('wb-icon',wbIcon)
 Vue.component('wb-button',wbButton)
 Vue.component('wb-button-group',ButtonGroup)
@@ -39,6 +40,7 @@ Vue.component('wb-tabs-pane',wbTabsPane)
 Vue.component('wb-popover',wbPopover)
 Vue.component('wb-collapse',wbCollapse)
 Vue.component('wb-collapse-item',wbCollapseItem)
+Vue.component('wb-cascader',wbCascader)
 new Vue({
     el:'#app',
     data:{
@@ -47,7 +49,28 @@ new Vue({
         loading3:false,
         message:"你的名字",
     //    tabs
-        selectedTab:'user'
+        selectedTab:'user',
+    //    cascader
+         options:   [
+            {
+                name: "一级菜单1",
+                children: [
+                    { name: "二级菜单1-1" },
+                    {
+                        name: "二级菜单1-2",
+                        children: [
+                            { name: "三级菜单1-2-1", children: [{ name: "四级菜单1-2-1-1" }] },
+                        ],
+                    },
+                ],
+            },
+                { name: "一级菜单2" },
+                {
+                    name: "一级菜单3",
+                    children: [{ name: "二级菜单3-1" }, { name: "二级菜单3-2" }],
+                },
+            ],
+
     },
     methods:{
         back(value){
