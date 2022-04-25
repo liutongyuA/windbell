@@ -1,17 +1,15 @@
 <template>
   <div id="app">
     <p>1111</p>
-    <wb-cascader :options="options"></wb-cascader>
+    <wb-cascader :options="options" :selected="selected" @updateSelected="selected=$event"></wb-cascader>
     <p>2222</p>
-        <wb-button :loading="loading1" @click="loading1=!loading1">
-            按钮
-        </wb-button>
   </div>
 </template>
 <script>
 export default {
   name:'app',
-  data(){return {
+  data(){
+    return {
     loading1:false,
     loading2:false,
     loading3:false,
@@ -39,7 +37,7 @@ export default {
         children: [{ name: "二级菜单3-1" }, { name: "二级菜单3-2" }],
       },
     ],
-
+    selected:[]
   }},
   methods:{
     back(value){

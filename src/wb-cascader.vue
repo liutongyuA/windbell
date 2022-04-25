@@ -2,7 +2,7 @@
   <div class="cascader">
     <div class="trigger" @click="visible =!visible"></div>
     <div class="popover" v-if="visible">
-      <wb-cascader-tree :options="options"></wb-cascader-tree>
+      <wb-cascader-tree :selected="selected" :options="options" @updateSelected="updateSelected"></wb-cascader-tree>
     </div>
   </div>
 </template>
@@ -17,10 +17,16 @@ export default {
     }
   },
   props:{
-    options:{type:Array,require:true}
+    options:{type:Array,require:true},
+    selected:{type:Array,default:()=>[]}
   },
   components:{
     'wb-cascader-tree':wbCascaderTree
+  },
+  methods:{
+    updateSelected(copy){
+      this.$emit('updateSelected',copy)
+    }
   }
 
 }
