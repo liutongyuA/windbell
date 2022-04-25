@@ -1,6 +1,8 @@
 <template>
   <div class="cascader">
-    <div class="trigger" @click="visible =!visible"></div>
+    <div class="trigger" @click="visible =!visible">
+      {{selectedVal}}  &nbsp;
+    </div>
     <div class="popover" v-if="visible">
       <wb-cascader-tree :selected="selected" :options="options" @updateSelected="updateSelected"></wb-cascader-tree>
     </div>
@@ -27,8 +29,18 @@ export default {
     updateSelected(copy){
       this.$emit('updateSelected',copy)
     }
-  }
-
+  },
+  computed:{
+    selectedVal(){
+      let aaa = this.selected.map((item)=>{
+          return item.name
+      })
+      return aaa.join('-')
+    }
+  },
+mounted() {
+  console.log(this.selected);
+}
 }
 </script>
 
@@ -36,9 +48,13 @@ export default {
 .cascader{
   position: relative;
   .trigger{
-    width: 100px;
-    height: 32px;
-    border:1px solid black;
+    display: inline-block;
+    height: 34px;
+    min-width: 10em;
+    padding: 0 1em;
+    line-height: 32px;
+    border:1px solid #ddd;
+    border-radius: 4px;
   }
   .popover{
     height: 200px;
