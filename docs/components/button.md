@@ -1,6 +1,8 @@
 # 按钮
 
 简单用法
-<ClientOnly>
-<button-view></button-view>
-</ClientOnly>
+::: demo
+```html
+<wb-button icon="download"></wb-button>
+:::
+```

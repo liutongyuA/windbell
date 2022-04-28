@@ -3,6 +3,9 @@
     <p>1111</p>
     <wb-cascader :options="options" :selected="selected" @updateSelected="selected=$event"></wb-cascader>
     <p>2222</p>
+
+    <wb-icon icon="download"></wb-icon>
+    <wb-button icon="right"></wb-button>
   </div>
 </template>
 <script>

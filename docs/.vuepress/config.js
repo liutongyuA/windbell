@@ -6,7 +6,7 @@ module.exports = {
         [
             'link', { rel: 'icon', href: '/img/logo.png' }
         ]],
-        themeConfig: {
+    themeConfig: {
         logo:'/img/logo.png',
         nav: [
             {text: '主页', link: '/'},
@@ -29,5 +29,6 @@ module.exports = {
                 ],
             },
         ]
-    }
+    },
+    plugins: ['demo-container']
 }
