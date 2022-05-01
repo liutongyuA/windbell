@@ -1,7 +1,14 @@
 module.exports = {
+
     base:'/windbell/',
-    title: '风铃UI',
-    description: '基于Vue的UI框架',
+    locales: {
+        '/':{
+        lang: 'zh-CN',
+        title: '风铃UI',
+        description: '基于Vue的UI框架',
+        }
+    },
+
     head: [
         [
             'link', { rel: 'icon', href: '/img/logo.png' }
@@ -28,7 +35,8 @@ module.exports = {
                     '/components/input',
                 ],
             },
-        ]
+        ],
+        sidebarDepth:0
     },
     plugins: ['demo-container']
 }
