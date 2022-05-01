@@ -17,17 +17,11 @@ module.exports = {
         logo:'/img/logo.png',
         nav: [
             {text: '主页', link: '/'},
-            {text: '文档', link: '/guide/'},
+            {text: 'GitHub', link: 'https://github.com/liutongyuA'},
             {text: '谷歌', link: 'https://google.com'},
         ],
         sidebar: [
-            {
-                title: '入门',
-                children: [
-                    '/install/',
-                    '/start/',
-                ],
-            },
+            '/introduce/',
             {
                 title: '组件',
                 children: [
