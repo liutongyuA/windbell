@@ -31,6 +31,7 @@ module.exports = {
                     '/components/layout',
                     '/components/message',
                     '/components/tabs',
+                    '/components/popover',
                 ],
             },
         ],

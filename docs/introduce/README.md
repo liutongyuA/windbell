@@ -21,6 +21,6 @@ Button 按钮 、Grid 网格布局 、Layout 默认布局
 ##### 表单
 Input 输入框 、Cascader 级联选择器
 ##### 通知
-Popover 弹出框 、Toast 提示 、 Message 消息提示
+Popover 弹出框 、 Message 消息提示
 ##### 其他
 Collapse 折叠面板 、Tabs 标签页

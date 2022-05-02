@@ -14,6 +14,7 @@ import wbTabsNav from '../../src/wb-tabs-nav'
 import wbTabsItem from '../../src/wb-tabs-item'
 import wbTabsContent from '../../src/wb-tabs-content'
 import wbTabsPane from '../../src/wb-tabs-pane'
+import wbPopover from '../../src/wb-popover'
 export default  ({ Vue}) => {
         Vue.mixin({
             mounted() {
@@ -33,6 +34,7 @@ export default  ({ Vue}) => {
                 Vue.component(wbTabsItem.name, wbTabsItem);
                 Vue.component(wbTabsContent.name, wbTabsContent);
                 Vue.component(wbTabsPane.name, wbTabsPane);
+                Vue.component(wbPopover.name, wbPopover);
             }
         })
 }
