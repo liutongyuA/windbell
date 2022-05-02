@@ -61,6 +61,7 @@ export default {
     },
     updateStyle(){
       this.$nextTick(()=>{
+        if(this.$refs.line)
         this.$refs.line.style.height=this.$refs.message.getBoundingClientRect().height+'px'
       })
     }
@@ -89,8 +90,8 @@ $duration:0.3s;
 .message{
   font-size: 14px;
   min-height: 40px;
-  background-color: rgba(0,0,0,0.75);
-  color: white;
+  background-color: #EEF3FC;
+  color: #909399;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -99,9 +100,10 @@ $duration:0.3s;
   align-items: center;
   border-radius: 4px;
   padding:0 16px;
-  box-shadow: 0 0 3px 0 rgba(0,0,0,0.50);
+  box-shadow: 0 0 3px 0 #EEF3FC;
   .line{
-    border-left: 1px solid #666;
+    border-left: 1px solid #999;
+    margin-left: 16px;
   }
   .close{
     padding-left: 16px;
@@ -109,6 +111,7 @@ $duration:0.3s;
     cursor: pointer;
   }
   &.pos-top{
+    z-index: 999;
     top: 0;
     animation: fade-down $duration;
   }

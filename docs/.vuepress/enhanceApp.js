@@ -8,6 +8,7 @@ import wbContent from '../../src/wb-content'
 import wbHeader from '../../src/wb-header'
 import wbFooter from '../../src/wb-footer'
 import wbAside from '../../src/wb-aside'
+import plugin from '../../src/plugin'
 export default  ({ Vue}) => {
         Vue.mixin({
             mounted() {
@@ -21,6 +22,7 @@ export default  ({ Vue}) => {
                 Vue.component(wbHeader.name, wbHeader);
                 Vue.component(wbFooter.name, wbFooter);
                 Vue.component(wbAside.name, wbAside);
+                Vue.use(plugin)
             }
         })
 }
