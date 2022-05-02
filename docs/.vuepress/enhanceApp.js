@@ -9,6 +9,11 @@ import wbHeader from '../../src/wb-header'
 import wbFooter from '../../src/wb-footer'
 import wbAside from '../../src/wb-aside'
 import plugin from '../../src/plugin'
+import wbTabs from '../../src/wb-tabs'
+import wbTabsNav from '../../src/wb-tabs-nav'
+import wbTabsItem from '../../src/wb-tabs-item'
+import wbTabsContent from '../../src/wb-tabs-content'
+import wbTabsPane from '../../src/wb-tabs-pane'
 export default  ({ Vue}) => {
         Vue.mixin({
             mounted() {
@@ -22,7 +27,12 @@ export default  ({ Vue}) => {
                 Vue.component(wbHeader.name, wbHeader);
                 Vue.component(wbFooter.name, wbFooter);
                 Vue.component(wbAside.name, wbAside);
-                Vue.use(plugin)
+                Vue.use(plugin);
+                Vue.component(wbTabs.name, wbTabs);
+                Vue.component(wbTabsNav.name, wbTabsNav);
+                Vue.component(wbTabsItem.name, wbTabsItem);
+                Vue.component(wbTabsContent.name, wbTabsContent);
+                Vue.component(wbTabsPane.name, wbTabsPane);
             }
         })
 }

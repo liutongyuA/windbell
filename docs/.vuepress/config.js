@@ -30,6 +30,7 @@ module.exports = {
                     '/components/grid',
                     '/components/layout',
                     '/components/message',
+                    '/components/tabs',
                 ],
             },
         ],
