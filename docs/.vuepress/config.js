@@ -32,6 +32,8 @@ module.exports = {
                     '/components/message',
                     '/components/tabs',
                     '/components/popover',
+                    '/components/collapse',
+                    '/components/cascader',
                 ],
             },
         ],

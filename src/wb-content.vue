@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content2">
     <slot></slot>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.content{
+.content2{
   flex-grow: 1;
 }
 </style>

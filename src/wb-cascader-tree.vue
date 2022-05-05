@@ -34,7 +34,10 @@ props:{
       const copy = JSON.parse(JSON.stringify(this.selected))
       copy[this.level] = item
       copy.splice(this.level+1)
+      console.log(this.selected);
       this.$emit('updateSelected',copy)
+      console.log(this.selected);
+
     },
     updateSelected(copy){
       this.$emit('updateSelected',copy)

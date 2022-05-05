@@ -5,7 +5,7 @@
     <wb-icon icon="down" v-show="isOpen"></wb-icon>
     {{title}}
   </div>
-  <div class="content" v-if="isOpen">
+  <div class="content1" v-if="isOpen">
     <slot></slot>
   </div>
 </div>
@@ -43,7 +43,7 @@ data(){
     cursor: pointer;
     .svg{fill:#ddd;margin-right: 1em}
 }
-  >.content{
+  >.content1{
     padding: 1em 0.5em;
   }
   >.title:first-child{

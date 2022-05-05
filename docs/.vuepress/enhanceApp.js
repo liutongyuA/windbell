@@ -15,6 +15,9 @@ import wbTabsItem from '../../src/wb-tabs-item'
 import wbTabsContent from '../../src/wb-tabs-content'
 import wbTabsPane from '../../src/wb-tabs-pane'
 import wbPopover from '../../src/wb-popover'
+import wbCollapse from '../../src/wb-collapse'
+import wbCollapseItem from '../../src/wb-collapse-item'
+import wbCascader from '../../src/wb-cascader'
 export default  ({ Vue}) => {
         Vue.mixin({
             mounted() {
@@ -35,6 +38,9 @@ export default  ({ Vue}) => {
                 Vue.component(wbTabsContent.name, wbTabsContent);
                 Vue.component(wbTabsPane.name, wbTabsPane);
                 Vue.component(wbPopover.name, wbPopover);
+                Vue.component(wbCollapse.name, wbCollapse);
+                Vue.component(wbCollapseItem.name, wbCollapseItem);
+                Vue.component(wbCascader.name, wbCascader);
             }
         })
 }

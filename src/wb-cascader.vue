@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import wbCascaderTree from './wb-cascader-tree'
 export default {
   name: "wb-cascader",
   data(){
@@ -23,7 +22,7 @@ export default {
     selected:{type:Array,default:()=>[]}
   },
   components:{
-    'wb-cascader-tree':wbCascaderTree
+    'wb-cascader-tree':()=>import('./wb-cascader-tree')
   },
   methods:{
     updateSelected(copy){
@@ -38,15 +37,14 @@ export default {
       return aaa.join('-')
     }
   },
-mounted() {
-  console.log(this.selected);
-}
+
 }
 </script>
 
 <style scoped lang="scss">
 .cascader{
   position: relative;
+  z-index:999;
   .trigger{
     display: inline-block;
     height: 34px;
