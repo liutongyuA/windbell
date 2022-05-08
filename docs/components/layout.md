@@ -5,7 +5,7 @@
 ```html
 <template>
     <div>
-        <wb-layout >
+        <wb-layout>
             <wb-header>头部</wb-header>
             <wb-content>内容区</wb-content>
             <wb-footer>底部</wb-footer>
@@ -19,7 +19,7 @@
             text-align: center;
             line-height: 60px;
         }
-        .content {
+        .contentLayout {
             background-color: #E9EEF3;
             color: #333;
             text-align: center;
@@ -57,7 +57,7 @@
             line-height: 200px;
             padding: 10px;
         }
-        .content {
+        .contentLayout {
             background-color: #E9EEF3;
             color: #333;
             text-align: center;
@@ -97,7 +97,7 @@
             line-height: 200px;
             padding: 10px;
         }
-        .content {
+        .contentLayout {
             background-color: #E9EEF3;
             color: #333;
             text-align: center;
