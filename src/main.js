@@ -22,6 +22,7 @@ import wbPopover from './wb-popover'
 import wbCollapse from './wb-collapse'
 import wbCollapseItem from './wb-collapse-item'
 import wbCascader from './wb-cascader'
+import wbDialog from './wb-dialog'
 Vue.component('wb-icon',wbIcon)
 Vue.component('wb-button',wbButton)
 Vue.component('wb-button-group',ButtonGroup)
@@ -42,6 +43,7 @@ Vue.component('wb-popover',wbPopover)
 Vue.component('wb-collapse',wbCollapse)
 Vue.component('wb-collapse-item',wbCollapseItem)
 Vue.component('wb-cascader',wbCascader)
+Vue.component('wb-dialog',wbDialog)
 Vue.config.productionTip = false
 new Vue({
     render: h => h(App)
