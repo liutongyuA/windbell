@@ -68,6 +68,7 @@ export default {
   .dialogWrapper{
     width: 30%;
     border: 2px solid #e9e9e9;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);;
     border-radius: 2px;
     background-color: #fff;
     margin: 50px auto;
@@ -93,9 +94,12 @@ export default {
   .dialogMain{
     width: 100%;
     height: 150px;
+    padding: 20px 40px;
+    overflow-y: auto;
   }
   .dialogFooter{
-    border: 1px solid red;
+    padding: 12px 16px;
+    border-top: 1px solid #e9e9e9;
   }
   .isModal {
     background-color: rgba(0, 0, 0, 0.5);
