@@ -58,6 +58,7 @@ $border-color-hover: #666;
   align-items: center;
   vertical-align: middle;
   &:hover {
+    cursor: pointer;
   border-color: $border-color-hover;
 }
   &:active {
