@@ -1,16 +1,18 @@
 <template>
     <transition name="animation">
 <!--      遮罩层-->
-      <div class="dialogModal" :class="{ isModal: modal }" v-show="visible">
+      <div class="dialogModal" :class="{ isModal: modal }" v-show="visible" @click="closeModal">
         <!--       @click="clickMaskCloseFn"-->
-        <div class="dialogWrapper" >
+        <div class="dialogWrapper" @click.stop>
           <div class="dialogHeader">
             <!-- 笔记：这样写可以做到若有传递过来的title就用传递过来的title 若有传递过来的插槽，就以插槽的为准 -->
             <slot name="header">
               <span>{{ title }}</span>
             </slot>
-<!--             @click="close"-->
-            <i class="el-icon-close" v-show="showClose"> </i>
+<!--            <i class="el-icon-close" v-show="showClose" @click="close"> </i>-->
+            <svg class="svg" v-show="showClose" @click="close">
+              <use xlink:href="#i-chacha"></use>
+            </svg>
           </div>
 
           <div class="dialogMain">
@@ -50,10 +52,24 @@ export default {
       default: true,
     },
   },
+  mounted() {
+    import('./svg2').then(module => {
+    })
+  },
+  methods:{
+    //点x关闭,false参数传给父亲，父亲将作为是否显示visible属性传过来
+    close(){
+      this.$emit('closeBefore',false)
+    },
+    //点遮罩层关闭,注意要给子元素阻止冒泡
+    closeModal(){
+        this.$emit('closeBefore',false)
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style>
   .dialogModal{
     width: 100%;
     height: 100%;
@@ -67,7 +83,6 @@ export default {
 }
   .dialogWrapper{
     width: 30%;
-    border: 2px solid #e9e9e9;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);;
     border-radius: 2px;
     background-color: #fff;
@@ -85,21 +100,37 @@ export default {
     align-items: center;
   }
   .dialogHeader >span{
-    font-size: 24px;
+    font-size: 18px;
   }
-  .dialogHeader >i{
-    font-size: 24px;
+  .dialogHeader >.svg{
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: gray;
+    overflow: hidden;
     cursor: pointer;
+  }
+  .dialogHeader >.svg:hover {
+    fill:black;
+    font-weight:bold;
   }
   .dialogMain{
     width: 100%;
     height: 150px;
     padding: 20px 40px;
     overflow-y: auto;
+    font-size: 14px;
   }
   .dialogFooter{
     padding: 12px 16px;
     border-top: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .dialogFooter >.wb-button:nth-child(1){
+      margin-right: 10px;
+  }
+  .dialogFooter >.wb-button:nth-child(2){
+    margin-left: 10px;
   }
   .isModal {
     background-color: rgba(0, 0, 0, 0.5);
