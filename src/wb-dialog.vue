@@ -135,4 +135,12 @@ export default {
   .isModal {
     background-color: rgba(0, 0, 0, 0.5);
   }
+  .animation-enter,
+  .animation-leave-to {
+    opacity: 0;
+  }
+  .animation-enter-active,
+  .animation-leave-active {
+    transition: opacity 0.3s;
+  }
 </style>
