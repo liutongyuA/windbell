@@ -5,6 +5,7 @@
         title="设置标题"
         :showClose="true"
         :modal="true"
+        dialogWidth="70%"
         @closeBefore="beforeClose"
     >
       <!--      <template slot="header"> 头部标题 </template>-->
@@ -24,7 +25,7 @@
       </template>
     </wb-dialog>
     <wb-input></wb-input>
-    <wb-button icon="settings" @click="visible=!visible">点我</wb-button>
+    <wb-button @click="visible=!visible">点我</wb-button>
   </div>
 </template>
 <script>
@@ -57,6 +58,6 @@ export default {
 }
 
 #app {
-  padding: 200px;
+  //padding: 200px;
 }
 </style>
