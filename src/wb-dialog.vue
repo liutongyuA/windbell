@@ -2,7 +2,7 @@
     <transition name="animation">
 <!--      遮罩层-->
       <div class="dialogModal" :class="{ isModal: modal }" v-show="visible" @click="closeModal">
-        <div class="dialogWrapper" @click.stop :style="{width:dialogWidth}">
+        <div class="dialogWrapper" @click.stop>
           <div class="dialogHeader">
             <!-- 笔记：这样写可以做到若有传递过来的title就用传递过来的title 若有传递过来的插槽，就以插槽的为准 -->
             <slot name="header">
@@ -49,8 +49,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    //指定宽度
-    dialogWidth:{}
   },
   mounted() {
     // import('./svg2').then(module => {
@@ -69,7 +67,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .dialogModal{
     width: 100%;
     height: 100%;
@@ -126,9 +124,14 @@ export default {
         >.wb-button:nth-child(1){
           margin-right: 10px;
         }
-        >.wb-button:nth-child(2){
+        & >.wb-button:nth-child(2){
           margin-left: 10px;
         }
+      }
+    }
+    @media (max-width:500px) {
+      >.dialogWrapper{
+        width: 85%;
       }
     }
 }
