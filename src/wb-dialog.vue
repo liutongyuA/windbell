@@ -129,6 +129,24 @@ export default {
         }
       }
     }
+    //中大
+    @media (max-width:1201px) {
+      >.dialogWrapper{
+        width: 35%;
+      }
+    }
+    //小
+    @media (max-width:993px) {
+      >.dialogWrapper{
+        width: 40%;
+      }
+    }
+    //超小
+    @media (max-width:860px) {
+      >.dialogWrapper{
+        width: 50%;
+      }
+    }
     @media (max-width:500px) {
       >.dialogWrapper{
         width: 85%;
