@@ -24,7 +24,7 @@
       </template>
     </wb-dialog>
     <wb-input></wb-input>
-    <wb-button @click="visible=!visible">点我</wb-button>
+    <wb-button icon="settings" @click="visible=!visible">点我</wb-button>
   </div>
 </template>
 <script>

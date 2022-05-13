@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import './svg2'
 export default {
   name: "wb-dialog",
   props: {
@@ -53,8 +54,8 @@ export default {
     },
   },
   mounted() {
-    import('./svg2').then(module => {
-    })
+    // import('./svg2').then(module => {
+    // })
   },
   methods:{
     //点x关闭,false参数传给父亲，父亲将作为是否显示visible属性传过来
@@ -69,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
   .dialogModal{
     width: 100%;
     height: 100%;

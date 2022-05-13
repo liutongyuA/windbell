@@ -1,6 +1,6 @@
 {
   "name": "windbell",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "this is UI",
   "main": "dist/windbell.umd.js",
   "scripts": {

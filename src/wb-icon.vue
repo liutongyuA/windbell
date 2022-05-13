@@ -5,12 +5,13 @@
 </template>
 
 <script>
+import './svg'
 export default {
   name: "wb-icon",
   props:['icon'],
   mounted() {
-    import('./svg').then(module => {
-    })
+    // import('./svg').then(module => {
+    // })
   }
 }
 </script>
