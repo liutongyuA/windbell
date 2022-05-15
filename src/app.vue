@@ -5,7 +5,7 @@
         title="设置标题"
         :showClose="true"
         :modal="true"
-        dialogWidth="70%"
+        dialogWidth="50%"
         @closeBefore="beforeClose"
     >
       <!--      <template slot="header"> 头部标题 </template>-->

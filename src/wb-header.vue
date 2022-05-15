@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="wbHeader">
     <slot></slot>
   </div>
 </template>

@@ -2,7 +2,7 @@
     <transition name="animation">
 <!--      遮罩层-->
       <div class="dialogModal" :class="{ isModal: modal }" v-show="visible" @click="closeModal">
-        <div class="dialogWrapper" @click.stop>
+        <div class="dialogWrapper" @click.stop :style="{width:dialogWidth}">
           <div class="dialogHeader">
             <!-- 笔记：这样写可以做到若有传递过来的title就用传递过来的title 若有传递过来的插槽，就以插槽的为准 -->
             <slot name="header">
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import './svg2'
+// import './svg2'
 export default {
   name: "wb-dialog",
   props: {
@@ -49,10 +49,13 @@ export default {
       type: Boolean,
       default: true,
     },
+    // 指定宽度
+    dialogWidth:{
+      type:String,
+    }
   },
   mounted() {
-    // import('./svg2').then(module => {
-    // })
+    import('./svg2').then(module => {})
   },
   methods:{
     //点x关闭,false参数传给父亲，父亲将作为是否显示visible属性传过来
@@ -75,9 +78,7 @@ export default {
     top: 0;
     left: 0;
     overflow: hidden;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items:center;*/
+    z-index: 999;
     >.dialogWrapper{
       width: 30%;
       box-shadow: 0 1px 3px rgba(0,0,0,0.3);;
@@ -111,7 +112,7 @@ export default {
       }
       >.dialogMain{
         width: 100%;
-        height: 150px;
+        //height: 150px;
         padding: 20px 40px;
         //overflow-y: auto;
         font-size: 14px;

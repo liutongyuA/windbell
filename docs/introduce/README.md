@@ -11,16 +11,20 @@
 
 #### 安装
 
-```
+```bash
 npm i windbell / yarn add windbell
 ```
-
+#### 引入
+```js
+import * as wb from 'windbell'
+import 'windbell/dist/windbell.css'
+```
 #### 封装组件
 ##### 基础
 Button 按钮 、Grid 网格布局 、Layout 默认布局
 ##### 表单
 Input 输入框 、Cascader 级联选择器
 ##### 通知
-Popover 弹出框 、 Message 消息提示
+Popover 弹出框 、 Message 消息提示 
 ##### 其他
-Collapse 折叠面板 、Tabs 标签页
+Collapse 折叠面板 、Tabs 标签页、dialog对话框

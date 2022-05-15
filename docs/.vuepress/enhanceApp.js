@@ -18,6 +18,7 @@ import wbPopover from '../../src/wb-popover'
 import wbCollapse from '../../src/wb-collapse'
 import wbCollapseItem from '../../src/wb-collapse-item'
 import wbCascader from '../../src/wb-cascader'
+import wbDialog from '../../src/wb-dialog'
 export default  ({ Vue}) => {
         Vue.mixin({
             mounted() {
@@ -41,6 +42,7 @@ export default  ({ Vue}) => {
                 Vue.component(wbCollapse.name, wbCollapse);
                 Vue.component(wbCollapseItem.name, wbCollapseItem);
                 Vue.component(wbCascader.name, wbCascader);
+                Vue.component(wbDialog.name, wbDialog);
             }
         })
 }

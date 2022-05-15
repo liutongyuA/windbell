@@ -13,7 +13,7 @@
     </div>
 </template>
 <style>
-    .header, .footer {
+    .wbHeader, .wbFooter {
             background-color: #B3C0D1;
             color: #333;
             text-align: center;
@@ -44,7 +44,7 @@
     </div>
 </template>
 <style>
-    .header, .footer {
+    .wbHeader, .wbFooter {
             background-color: #B3C0D1;
             color: #333;
             text-align: center;
@@ -84,7 +84,7 @@
     </div>
 </template>
 <style>
-    .header, .footer {
+    .wbHeader, .wbFooter {
             background-color: #B3C0D1;
             color: #333;
             text-align: center;
